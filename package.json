@@ -1,0 +1,40 @@
+{
+  "name": "quicksite",
+  "version": "1.0.0",
+  "description": "quick static sites from markdown files",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "test": "(npmts --notest && npm run buildSiteTest)",
+    "buildSiteTest": "(cd test/ && node ../dist/cli.js)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/pushrocks/quicksite.git"
+  },
+  "keywords": [
+    "static",
+    "site",
+    "generator"
+  ],
+  "author": "Lossless GmbH",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/pushrocks/quicksite/issues"
+  },
+  "homepage": "https://gitlab.com/pushrocks/quicksite#README",
+  "dependencies": {
+    "@types/handlebars": "^4.0.31",
+    "@types/marked": "^0.0.28",
+    "handlebars": "^4.0.6",
+    "marked": "^0.3.6",
+    "smartcli": "^2.0.1",
+    "smartfile": "^4.1.6",
+    "smartq": "^1.1.1",
+    "typings-global": "^1.0.14"
+  },
+  "devDependencies": {
+    "smartchai": "^1.0.3",
+    "typings-test": "^1.0.3"
+  }
+}
