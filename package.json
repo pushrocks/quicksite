@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "bin": {
-    "npmts": "assets/cliNpmts.js"
+    "quicksite": "assets/cli.js"
   },
   "scripts": {
     "test": "(npmts --notest && npm run buildSiteTest)",
