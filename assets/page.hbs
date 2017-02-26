@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quicksite</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+    <style>
+      {{{css}}}
+    </style>
+  </head>
+  <body>
+    <div class="menuBox">
+      {{#each menuItems}}
+        <a href="/{{link}}">{{name}}</a>
+      {{/each}}
+    </div>
+    <div class="content">
+      {{{html}}}
+    </div>
+  </body>
+</html>
