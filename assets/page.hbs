@@ -8,15 +8,19 @@
     </style>
   </head>
   <body>
-    <div class='menuBox'>
-      <div class='menuItems'>
-      {{#each menuItems}}
-        <a href='/{{link}}'>{{name}}</a>
-      {{/each}}
+    <div class='content'>
+      <div class='menuBox'>
+        <div class='menuItems'>
+        {{#each menuItems}}
+          <a href='/{{link}}'>{{name}}</a>
+        {{/each}}
+        </div>
+      </div>
+      {{{html}}}
+      <div class='footer'>
+        
       </div>
     </div>
-    <div class='content'>
-      {{{html}}}
-    </div>
+    
   </body>
 </html>

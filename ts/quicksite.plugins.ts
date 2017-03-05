@@ -24,6 +24,7 @@ export {
   path,
   smartcli,
   smartfile,
+  smartfm,
   smarthbs,
   smartpath,
   smartsass

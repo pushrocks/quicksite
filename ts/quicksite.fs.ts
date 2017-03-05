@@ -11,11 +11,12 @@ export let readHandlebars = async () => {
   let fileList = await plugins.smartfile.fs.listFileTree(paths.docsDir, '**/*.md')
   let quicksiteFileArray: IQuicksiteFile[] = []
   for (let filePathArg of fileList) {
+    let fileString = plugins.smartfile.fs.toStringSync(plugins.path.join(paths.docsDir, filePathArg))
     quicksiteFileArray.push({
       css: null,
-      data: null,
+      data: plugins.smartfm.parse(fileString),
       filePath: filePathArg.replace(/.md/, '.html'),
-      handlebars: plugins.smartfile.fs.toStringSync(plugins.path.join(paths.docsDir, filePathArg)),
+      handlebars: fileString,
       markdown: null,
       menuItems: null,
       html: null,

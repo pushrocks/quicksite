@@ -1,0 +1,9 @@
+@import './variables';
+
+.footer {
+  border-top: 2px #333 solid;
+  margin: auto;
+  margin-top: 70px;
+  margin-bottom: 60px;
+  max-width: $content-width;
+}
