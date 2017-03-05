@@ -1,5 +1,6 @@
 export interface IQuicksiteFile {
   css: string
+  data: any // any data that is prepended in FrontMatter
   filePath: string // the original filePath of the markdown file
   handlebars: string // the original file content, a mixture of markdown and handlebars
   markdown: string // the mardown string from the file

@@ -13,6 +13,7 @@ export let readHandlebars = async () => {
   for (let filePathArg of fileList) {
     quicksiteFileArray.push({
       css: null,
+      data: null,
       filePath: filePathArg.replace(/.md/, '.html'),
       handlebars: plugins.smartfile.fs.toStringSync(plugins.path.join(paths.docsDir, filePathArg)),
       markdown: null,

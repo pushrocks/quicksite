@@ -1,5 +1,6 @@
 export interface IQuicksiteFile {
     css: string;
+    data: any;
     filePath: string;
     handlebars: string;
     markdown: string;
