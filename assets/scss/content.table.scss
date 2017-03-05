@@ -1,0 +1,76 @@
+// Variables
+// ---------------------
+$table-header-font-weight : 400;
+$table-header-font-color : #757575;
+$table-cell-padding : 10px;
+$table-background : #fff;
+$table-bg-accent : #f5f5f5;
+$table-bg-hover : rgba(0, 0, 0, .12);
+$table-bg-active : $table-bg-hover;
+$table-border-color : #e0e0e0;
+// Mixins
+// -----------------
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+// Tables
+//
+// -----------------
+// Baseline styles
+table {
+    @include transition(all .3s ease);
+    width: 100%;
+    margin-bottom: 2rem;
+    margin-left:  0px;
+    margin-right: 0px;
+    background-color: $table-background;
+    box-shadow: 0px 0px 3px #ccc; 
+    border-radius: 3px;
+    padding: 10px;
+    @media screen and (min-width: $content-width) {
+      width: $content-width;
+    }
+    @media screen and (min-width: 1200px) {
+      width: $content-width + 200px;
+      margin-left:  -100px;
+      margin-right: -100px;
+    }
+    
+    thead,
+    tbody,
+    tfoot {
+        tr {
+            @include transition(all .3s ease);
+            th,
+            td {
+                text-align: left;
+                padding: $table-cell-padding;
+                vertical-align: top;
+                border-top: 0;
+                @include transition(all .3s ease);
+            }
+        }
+    }
+    thead tr th {
+        font-weight: $table-header-font-weight;
+        color: $table-header-font-color;
+        vertical-align: bottom;
+        border-bottom: 1px solid rgba(0, 0, 0, .12);
+    }
+    caption+thead,
+    colgroup+thead,
+    thead:first-child {
+        tr:first-child {
+            th,
+            td {
+                border-top: 0;
+            }
+        }
+    }
+    tbody+tbody {
+        border-top: 1px solid rgba(0, 0, 0, .12);
+    }
+}

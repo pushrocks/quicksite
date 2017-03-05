@@ -1,6 +1,7 @@
 import * as plugins from './quicksite.plugins'
 
 export let cwd = process.cwd()
+export let docsDir = plugins.path.join(cwd, 'docs')
 export let publicDir = plugins.path.join(cwd, 'public')
 
 export let packageDir = plugins.path.join(__dirname, '..')

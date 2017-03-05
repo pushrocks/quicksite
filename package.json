@@ -9,7 +9,8 @@
   },
   "scripts": {
     "test": "(npmts --notest && npm run buildSiteTest)",
-    "buildSiteTest": "(cd test/ && node ../dist/cli.js)"
+    "buildSiteTest": "(cd test/ && node ../dist/cli.js)",
+    "serve": "(cd test/public && browser-sync start -s)"
   },
   "repository": {
     "type": "git",
@@ -30,14 +31,16 @@
     "@types/handlebars": "^4.0.31",
     "@types/highlight.js": "^9.1.9",
     "@types/marked": "^0.0.28",
+    "beautylog": "^6.1.1",
     "handlebars": "^4.0.6",
     "highlight.js": "^9.9.0",
     "marked": "^0.3.6",
     "smartcli": "^2.0.1",
-    "smartfile": "^4.1.6",
-    "smarthbs": "^1.0.4",
+    "smartfile": "^4.1.7",
+    "smarthbs": "^1.0.5",
     "smartpath": "^3.2.8",
     "smartq": "^1.1.1",
+    "smartsass": "^1.0.3",
     "typings-global": "^1.0.14"
   },
   "devDependencies": {

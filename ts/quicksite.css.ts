@@ -5,7 +5,11 @@ import * as paths from './quicksite.paths'
 import { IQuicksiteFile } from './quicksite.interfaces'
 
 export let addCss = async (quicksiteFilesArg: IQuicksiteFile[]) => {
-  let css = plugins.smartfile.fs.toStringSync(plugins.path.join(paths.assetDir, 'style.css'))
+  let quickSmartsass = new plugins.smartsass.Smartsass({
+    entryFilePath: plugins.path.join(paths.assetDir, 'scss/main.scss')
+  })
+  let smartsassResult = await quickSmartsass.render()
+  let css = smartsassResult.css.toString()
   for (let quicksiteFile of quicksiteFilesArg) {
     quicksiteFile.css = css
   }

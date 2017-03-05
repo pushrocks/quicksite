@@ -1,13 +1,14 @@
 import 'typings-global'
+import * as beautylog from 'beautylog'
 import * as handlebars from 'handlebars'
 import * as highlightjs from 'highlight.js'
 import * as marked from 'marked'
-
 import * as path from 'path'
 import * as smartcli from 'smartcli'
 import * as smartfile from 'smartfile'
 import * as smarthbs from 'smarthbs'
 import * as smartpath from 'smartpath'
+import * as smartsass from 'smartsass'
 
 marked.setOptions({
   highlight: function (code) {
@@ -16,11 +17,13 @@ marked.setOptions({
 })
 
 export {
+  beautylog,
   handlebars,
   marked,
   path,
   smartcli,
   smartfile,
   smarthbs,
-  smartpath
+  smartpath,
+  smartsass
 }

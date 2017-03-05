@@ -8,13 +8,13 @@ import { IQuicksiteFile } from './quicksite.interfaces'
  * reads the markdown files within a directory
  */
 export let readHandlebars = async () => {
-  let fileList = await plugins.smartfile.fs.listFileTree(paths.cwd, '**/*.md')
+  let fileList = await plugins.smartfile.fs.listFileTree(paths.docsDir, '**/*.md')
   let quicksiteFileArray: IQuicksiteFile[] = []
   for (let filePathArg of fileList) {
     quicksiteFileArray.push({
       css: null,
       filePath: filePathArg.replace(/.md/, '.html'),
-      handlebars: plugins.smartfile.fs.toStringSync(plugins.path.resolve(filePathArg)),
+      handlebars: plugins.smartfile.fs.toStringSync(plugins.path.join(paths.docsDir, filePathArg)),
       markdown: null,
       menuItems: null,
       html: null,

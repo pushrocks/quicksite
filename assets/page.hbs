@@ -2,18 +2,20 @@
 <html>
   <head>
     <title>Quicksite</title>
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet'>
     <style>
       {{{css}}}
     </style>
   </head>
   <body>
-    <div class="menuBox">
+    <div class='menuBox'>
+      <div class='menuItems'>
       {{#each menuItems}}
-        <a href="/{{link}}">{{name}}</a>
+        <a href='/{{link}}'>{{name}}</a>
       {{/each}}
+      </div>
     </div>
-    <div class="content">
+    <div class='content'>
       {{{html}}}
     </div>
   </body>
