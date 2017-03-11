@@ -1,3 +1,6 @@
+---
+name: Some Other Name
+---
 # This is a Heading
 ## and a second heading
 

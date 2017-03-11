@@ -12,8 +12,15 @@ import { IMenuItem } from './quicksite.interfaces'
 export let buildMenu = async (quicksiteFilesArg: IQuicksiteFile[]) => {
   let menuItems: IMenuItem[] = []
   for (let quicksiteFile of quicksiteFilesArg) {
+    let menuName: string = (() => {
+      if (quicksiteFile.data.name) {
+        return quicksiteFile.data.name
+      } else {
+        return quicksiteFile.filePath.replace(/.html/, '')
+      }
+    })()
     menuItems.push({
-      name: quicksiteFile.filePath.replace(/.html/, ''),
+      name: menuName,
       link: quicksiteFile.filePath
     })
   }

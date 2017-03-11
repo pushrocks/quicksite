@@ -1,3 +1,6 @@
+---
+name: Some Name
+---
 # Testsite
 
 This is a introduction
