@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Quicksite</title>
-    <link href='https://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet'>
     <style>
       {{{css}}}
     </style>
@@ -19,11 +19,13 @@
       </div>
       {{{html}}}
       <div class='footer'>
-        {{#each footerItems}}
-          <div class='footerColumn'>
-            {{{html}}}
-          </div>
-        {{/each}}
+        <div class='footerGridContainer'>
+          {{#each footerItems}}
+            <div class='footerColumn'>
+              {{{html}}}
+            </div>
+          {{/each}}
+        </div>
       </div>
     </div>
     
