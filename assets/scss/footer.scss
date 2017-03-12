@@ -6,7 +6,7 @@
     margin-bottom: 60px;
     max-width: $content-width;
     .footerColumn {
-        width: 256px;
+        @include grid-column(4);
         h1 {
             font-size: 14px;
             text-align: left;

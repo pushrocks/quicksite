@@ -9,6 +9,7 @@ export let addCss = async (quicksiteFilesArg: IQuicksiteFile[]) => {
     entryFilePath: plugins.path.join(paths.assetDir, 'scss/main.scss'),
     includePaths: plugins.bourbon.includePaths
   })
+  quickSmartsass.addIncludePaths(plugins.bourbonNeat.includePaths)
   let smartsassResult = await quickSmartsass.render()
   let css = smartsassResult.css.toString()
   for (let quicksiteFile of quicksiteFilesArg) {

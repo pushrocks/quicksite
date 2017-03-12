@@ -252,6 +252,10 @@ boom@2.x.x:
   dependencies:
     hoek "2.x.x"
 
+bourbon-neat@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/bourbon-neat/-/bourbon-neat-2.0.0.tgz#16079272c3941e767da041e75ee86cf4d5ab4c9e"
+
 bourbon@^4.3.3:
   version "4.3.3"
   resolved "https://registry.yarnpkg.com/bourbon/-/bourbon-4.3.3.tgz#c51cb80c6a437aa55c16659597e5c4a86884ea38"
@@ -1544,9 +1548,9 @@ smartrequest@^1.0.4:
     smartq "^1.1.0"
     typings-global "^1.0.14"
 
-smartsass@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/smartsass/-/smartsass-1.0.4.tgz#abe85204a1dd7b2bdd8e0a0fced2e29321063dd5"
+smartsass@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/smartsass/-/smartsass-1.0.5.tgz#f052aad4b75275289f559c20d9ee4fcc5c1d0e8b"
   dependencies:
     "@types/node-sass" "^3.10.32"
     node-sass "^4.5.0"

@@ -1,6 +1,7 @@
 import 'typings-global'
 import * as beautylog from 'beautylog'
 let bourbon = require('bourbon')
+let bourbonNeat = require('bourbon-neat')
 import * as handlebars from 'handlebars'
 import * as highlightjs from 'highlight.js'
 import * as marked from 'marked'
@@ -21,6 +22,7 @@ marked.setOptions({
 export {
   beautylog,
   bourbon,
+  bourbonNeat,
   handlebars,
   marked,
   path,

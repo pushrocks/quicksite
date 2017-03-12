@@ -1,6 +1,7 @@
 import 'typings-global';
 import * as beautylog from 'beautylog';
 declare let bourbon: any;
+declare let bourbonNeat: any;
 import * as handlebars from 'handlebars';
 import * as marked from 'marked';
 import * as path from 'path';
@@ -10,4 +11,4 @@ import * as smartfm from 'smartfm';
 import * as smarthbs from 'smarthbs';
 import * as smartpath from 'smartpath';
 import * as smartsass from 'smartsass';
-export { beautylog, bourbon, handlebars, marked, path, smartcli, smartfile, smartfm, smarthbs, smartpath, smartsass };
+export { beautylog, bourbon, bourbonNeat, handlebars, marked, path, smartcli, smartfile, smartfm, smarthbs, smartpath, smartsass };
