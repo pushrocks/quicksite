@@ -1,9 +1,16 @@
 @import './variables';
-
 .footer {
-  border-top: 2px #333 solid;
-  margin: auto;
-  margin-top: 70px;
-  margin-bottom: 60px;
-  max-width: $content-width;
+    border-top: 2px #333 solid;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 60px;
+    max-width: $content-width;
+    .footerColumn {
+        width: 256px;
+        h1 {
+            font-size: 14px;
+            text-align: left;
+            text-transform: uppercase;
+        }
+    }
 }

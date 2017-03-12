@@ -6,7 +6,8 @@ import { IQuicksiteFile } from './quicksite.interfaces'
 
 export let addCss = async (quicksiteFilesArg: IQuicksiteFile[]) => {
   let quickSmartsass = new plugins.smartsass.Smartsass({
-    entryFilePath: plugins.path.join(paths.assetDir, 'scss/main.scss')
+    entryFilePath: plugins.path.join(paths.assetDir, 'scss/main.scss'),
+    includePaths: plugins.bourbon.includePaths
   })
   let smartsassResult = await quickSmartsass.render()
   let css = smartsassResult.css.toString()

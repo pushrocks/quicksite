@@ -3,7 +3,7 @@ import * as paths from './quicksite.paths'
 
 import { IQuicksiteFile } from './quicksite.interfaces'
 
-export let handlebarsToMarkdown = async (quicksiteFilesArg: IQuicksiteFile[]) => {
+export let handlebarsToMarkdown = async (quicksiteFilesArg: IQuicksiteFile[]): Promise<IQuicksiteFile[]> => {
   for (let quickSiteFile of quicksiteFilesArg) {
     let template = plugins.handlebars.compile(quickSiteFile.handlebars)
     quickSiteFile.markdown = template({})

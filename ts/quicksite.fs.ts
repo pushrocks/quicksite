@@ -17,6 +17,7 @@ export let readHandlebars = async () => {
       css: null,
       data: parsedFile.data,
       filePath: filePathArg.replace(/.md/, '.html'),
+      footerItems: null,
       handlebars: parsedFile.content,
       markdown: null,
       menuItems: null,

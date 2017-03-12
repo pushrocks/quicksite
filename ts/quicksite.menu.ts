@@ -9,7 +9,7 @@ import { IMenuItem } from './quicksite.interfaces'
 /**
  * traverses over the read quicksiteFile and creates menuData
  */
-export let buildMenu = async (quicksiteFilesArg: IQuicksiteFile[]) => {
+export let buildMenu = async (quicksiteFilesArg: IQuicksiteFile[]): Promise<IQuicksiteFile[]> => {
   let menuItems: IMenuItem[] = []
   for (let quicksiteFile of quicksiteFilesArg) {
     let menuName: string = (() => {
