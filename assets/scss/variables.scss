@@ -1,1 +1,8 @@
-$content-width: 768px
+$content-width: 768px; 
+$color-accent: #e4002b;
+
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
