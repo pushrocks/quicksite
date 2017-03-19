@@ -9,7 +9,7 @@ let providerObject: any = {}
 export let getProviderObject = async () => {
   let providerStrings = quicksiteNpmextra.dataFor<any>('quicksite',{})
   for (let providerString in providerStrings) {
-    providerObject[providerString] = require(providerStrings[providerString]).makeProvider()
+    providerObject[providerString] = await require(providerStrings[providerString]).makeProvider()
   }
   return providerObject
 }
