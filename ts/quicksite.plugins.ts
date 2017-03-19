@@ -5,6 +5,7 @@ let bourbonNeat = require('bourbon-neat')
 import * as handlebars from 'handlebars'
 import * as highlightjs from 'highlight.js'
 import * as marked from 'marked'
+import * as npmextra from 'npmextra'
 import * as path from 'path'
 import * as smartcli from 'smartcli'
 import * as smartfile from 'smartfile'
@@ -25,6 +26,7 @@ export {
   bourbonNeat,
   handlebars,
   marked,
+  npmextra,
   path,
   smartcli,
   smartfile,

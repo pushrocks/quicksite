@@ -67,6 +67,10 @@
   version "0.0.32"
   resolved "https://registry.yarnpkg.com/@types/q/-/q-0.0.32.tgz#bd284e57c84f1325da702babfc82a5328190c0c5"
 
+"@types/q@^1.x.x":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@types/q/-/q-1.0.0.tgz#57e5465d665b370d4217e69b344b20faa6b724f5"
+
 "@types/vinyl@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@types/vinyl/-/vinyl-2.0.0.tgz#fd213bf7f4136dde21fe1895500b12c186f8c268"
@@ -1130,6 +1134,18 @@ normalize-package-data@^2.3.2, normalize-package-data@^2.3.4:
     semver "2 || 3 || 4 || 5"
     validate-npm-package-license "^3.0.1"
 
+npmextra@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/npmextra/-/npmextra-2.0.5.tgz#6f84f8604578dbd0fe678ea5c0413173979aa3e0"
+  dependencies:
+    "@types/q" "^1.x.x"
+    beautylog "^6.1.5"
+    lodash "^4.17.4"
+    q "^1.4.1"
+    smartfile "^4.1.9"
+    smartq "^1.1.1"
+    typings-global "^1.0.14"
+
 "npmlog@0 || 1 || 2 || 3 || 4", npmlog@^4.0.0:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/npmlog/-/npmlog-4.0.2.tgz#d03950e0e78ce1527ba26d2a7592e9348ac3e75f"
@@ -1486,6 +1502,23 @@ smartenv@^2.0.0:
 smartfile@^4.1.4, smartfile@^4.1.7, smartfile@^4.1.8:
   version "4.1.8"
   resolved "https://registry.yarnpkg.com/smartfile/-/smartfile-4.1.8.tgz#4f568537de0cd1174ce3086036ac9df26f860330"
+  dependencies:
+    "@types/fs-extra" "0.x.x"
+    "@types/vinyl" "^2.0.0"
+    fs-extra "^2.0.0"
+    glob "^7.1.1"
+    js-yaml "^3.8.2"
+    require-reload "0.2.2"
+    smartpath "^3.2.8"
+    smartq "^1.1.1"
+    smartrequest "^1.0.4"
+    typings-global "^1.0.14"
+    vinyl "^2.0.1"
+    vinyl-file "^3.0.0"
+
+smartfile@^4.1.9:
+  version "4.1.9"
+  resolved "https://registry.yarnpkg.com/smartfile/-/smartfile-4.1.9.tgz#d789032193a45493607b8b37ff5811942f832008"
   dependencies:
     "@types/fs-extra" "0.x.x"
     "@types/vinyl" "^2.0.0"

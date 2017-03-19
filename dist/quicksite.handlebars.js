@@ -9,11 +9,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const plugins = require("./quicksite.plugins");
+const quicksite_providers_1 = require("./quicksite.providers");
 exports.handlebarsToMarkdown = (quicksiteFilesArg) => __awaiter(this, void 0, void 0, function* () {
+    let providerObject = yield quicksite_providers_1.getProviderObject();
     for (let quickSiteFile of quicksiteFilesArg) {
         let template = plugins.handlebars.compile(quickSiteFile.handlebars);
-        quickSiteFile.markdown = template({});
+        quickSiteFile.markdown = template(providerObject);
     }
     return quicksiteFilesArg;
 });
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicXVpY2tzaXRlLmhhbmRsZWJhcnMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi90cy9xdWlja3NpdGUuaGFuZGxlYmFycy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0FBQUEsK0NBQThDO0FBS25DLFFBQUEsb0JBQW9CLEdBQUcsQ0FBTyxpQkFBbUM7SUFDMUUsR0FBRyxDQUFDLENBQUMsSUFBSSxhQUFhLElBQUksaUJBQWlCLENBQUMsQ0FBQyxDQUFDO1FBQzVDLElBQUksUUFBUSxHQUFHLE9BQU8sQ0FBQyxVQUFVLENBQUMsT0FBTyxDQUFDLGFBQWEsQ0FBQyxVQUFVLENBQUMsQ0FBQTtRQUNuRSxhQUFhLENBQUMsUUFBUSxHQUFHLFFBQVEsQ0FBQyxFQUFFLENBQUMsQ0FBQTtJQUN2QyxDQUFDO0lBQ0QsTUFBTSxDQUFDLGlCQUFpQixDQUFBO0FBQzFCLENBQUMsQ0FBQSxDQUFBIn0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicXVpY2tzaXRlLmhhbmRsZWJhcnMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi90cy9xdWlja3NpdGUuaGFuZGxlYmFycy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0FBQUEsK0NBQThDO0FBRTlDLCtEQUF5RDtBQUk5QyxRQUFBLG9CQUFvQixHQUFHLENBQU8saUJBQW1DO0lBQzFFLElBQUksY0FBYyxHQUFHLE1BQU0sdUNBQWlCLEVBQUUsQ0FBQTtJQUM5QyxHQUFHLENBQUMsQ0FBQyxJQUFJLGFBQWEsSUFBSSxpQkFBaUIsQ0FBQyxDQUFDLENBQUM7UUFDNUMsSUFBSSxRQUFRLEdBQUcsT0FBTyxDQUFDLFVBQVUsQ0FBQyxPQUFPLENBQUMsYUFBYSxDQUFDLFVBQVUsQ0FBQyxDQUFBO1FBQ25FLGFBQWEsQ0FBQyxRQUFRLEdBQUcsUUFBUSxDQUFDLGNBQWMsQ0FBQyxDQUFBO0lBQ25ELENBQUM7SUFDRCxNQUFNLENBQUMsaUJBQWlCLENBQUE7QUFDMUIsQ0FBQyxDQUFBLENBQUEifQ==

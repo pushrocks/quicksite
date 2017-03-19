@@ -37,6 +37,7 @@
     "handlebars": "^4.0.6",
     "highlight.js": "^9.10.0",
     "marked": "^0.3.6",
+    "npmextra": "^2.0.5",
     "smartcli": "^2.0.1",
     "smartfile": "^4.1.8",
     "smartfm": "^1.0.2",
