@@ -8,7 +8,9 @@ export let handlebarsToMarkdown = async (quicksiteFilesArg: IQuicksiteFile[]): P
   let providerObject = await getProviderObject()
   for (let quickSiteFile of quicksiteFilesArg) {
     let template = plugins.handlebars.compile(quickSiteFile.handlebars)
-    quickSiteFile.markdown = template(providerObject)
+    quickSiteFile.markdown = template({
+      providers: providerObject
+    })
   }
   return quicksiteFilesArg
 }
