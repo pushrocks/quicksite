@@ -11,5 +11,6 @@ import * as smartfile from 'smartfile';
 import * as smartfm from 'smartfm';
 import * as smarthbs from 'smarthbs';
 import * as smartpath from 'smartpath';
+import * as smartrequire from 'smartrequire';
 import * as smartsass from 'smartsass';
-export { beautylog, bourbon, bourbonNeat, handlebars, marked, npmextra, path, smartcli, smartfile, smartfm, smarthbs, smartpath, smartsass };
+export { beautylog, bourbon, bourbonNeat, handlebars, marked, npmextra, path, smartcli, smartfile, smartfm, smarthbs, smartpath, smartrequire, smartsass };

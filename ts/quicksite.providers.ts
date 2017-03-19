@@ -9,7 +9,7 @@ let providerObject: any = {}
 export let getProviderObject = async () => {
   let quicksiteConfig = quicksiteNpmextra.dataFor<any>('quicksite',{})
   for (let provider in quicksiteConfig.providers) {
-    providerObject[provider] = await require(quicksiteConfig.providers[provider]).makeProvider()
+    providerObject[provider] = await plugins.smartrequire.requireInDirSync(quicksiteConfig.providers[provider], paths.cwd).makeProvider()
     plugins.beautylog.log(`added provider ${provider}`)
   }
   return providerObject

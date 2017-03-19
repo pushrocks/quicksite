@@ -44,6 +44,7 @@
     "smarthbs": "^1.0.5",
     "smartpath": "^3.2.8",
     "smartq": "^1.1.1",
+    "smartrequire": "^1.0.2",
     "smartsass": "^1.0.5",
     "typings-global": "^1.0.14"
   },

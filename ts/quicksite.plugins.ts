@@ -12,6 +12,7 @@ import * as smartfile from 'smartfile'
 import * as smartfm from 'smartfm'
 import * as smarthbs from 'smarthbs'
 import * as smartpath from 'smartpath'
+import * as smartrequire from 'smartrequire'
 import * as smartsass from 'smartsass'
 
 marked.setOptions({
@@ -33,5 +34,6 @@ export {
   smartfm,
   smarthbs,
   smartpath,
+  smartrequire,
   smartsass
 }
