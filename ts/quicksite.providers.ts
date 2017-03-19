@@ -7,9 +7,9 @@ let quicksiteNpmextra = new plugins.npmextra.Npmextra(paths.cwd)
 let providerObject: any = {}
 
 export let getProviderObject = async () => {
-  let providerStrings = quicksiteNpmextra.dataFor<any>('quicksite',{})
-  for (let providerString in providerStrings) {
-    providerObject[providerString] = await require(providerStrings[providerString]).makeProvider()
+  let quicksiteConfig = quicksiteNpmextra.dataFor<any>('quicksite',{})
+  for (let provider in quicksiteConfig.providers) {
+    providerObject[provider] = await require(quicksiteConfig.providers[provider]).makeProvider()
   }
   return providerObject
 }
