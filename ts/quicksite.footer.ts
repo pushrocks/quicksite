@@ -6,8 +6,17 @@ import { IQuicksiteFile, IFooterItem } from './quicksite.interfaces'
 
 
 export let buildFooter = async (quicksiteFilesArrayArg: IQuicksiteFile[]): Promise<IQuicksiteFile[]> => {
-  let footerMarkdownArray: string[] = plugins.smartfile.fs.toStringSync(plugins.path.join(paths.docsDir,'00footer.md'))
-    .split('///', 3)
+  // set up variables
+  let footerPath = plugins.path.join(paths.docsDir, '00footer.md')
+  let footerMarkdownArray: string[]
+
+  // make sure it exists
+  if (plugins.smartfile.fs.fileExistsSync(footerPath)) {
+    footerMarkdownArray = plugins.smartfile.fs.toStringSync(footerPath)
+      .split('///', 3)
+  } else {
+    footerMarkdownArray = []
+  }
   let footerItems: IFooterItem[] = []
   for (let footerMarkdown of footerMarkdownArray) {
     footerItems.push({
@@ -15,6 +24,7 @@ export let buildFooter = async (quicksiteFilesArrayArg: IQuicksiteFile[]): Promi
     })
   }
 
+  // add it to all files
   for (let quicksiteFile of quicksiteFilesArrayArg) {
     quicksiteFile.footerItems = footerItems
   }

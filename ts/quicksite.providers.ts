@@ -12,5 +12,11 @@ export let getProviderObject = async () => {
     providerObject[provider] = await plugins.smartrequire.requireInDirSync(quicksiteConfig.providers[provider], paths.cwd).makeProvider()
     plugins.beautylog.log(`added provider ${provider}`)
   }
+
+  // add data.json provider
+  let dataJsonPath = plugins.path.join(paths.docsDir, 'data.json')
+  if (plugins.smartfile.fs.fileExistsSync(dataJsonPath)) {
+    providerObject['data'] = plugins.smartfile.fs.toObjectSync(dataJsonPath)
+  }
   return providerObject
 }
