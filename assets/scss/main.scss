@@ -35,13 +35,10 @@
     thead {
         display: table-header-group;
     }
-    tr,
-    img {
+    tr {
         page-break-inside: avoid;
     }
-    img {
-        max-width: 100% !important;
-    }
+    
     p,
     h2,
     h3 {
@@ -79,7 +76,6 @@ small {
     font-size: .707em;
 }
 
-img,
 canvas,
 iframe,
 video,
@@ -95,15 +91,6 @@ body {
     font-weight: 300;
     line-height: 1.85;
     margin: 0px;
-}
-
-
-
-img {
-    border-radius: 50%;
-    height: 200px;
-    margin: 0 auto;
-    width: 200px;
 }
 
 a,
