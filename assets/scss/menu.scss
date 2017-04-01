@@ -1,25 +1,29 @@
 @import 'variables';
 
 .menuBox {
-  border-bottom: 2px #333 solid;
+  box-shadow: 0px 0px 5px #CCCCCC;
   margin: auto;
+  box-sizing: border-box;
   margin-bottom: 70px;
-  margin-top: 100px;
-  max-width: $content-width;
+  margin-top: 0px;
+  width:100%;
+  background: #2196F3;
+  position: fixed;
+  padding:15px;
+  will-change: transform;
   .menuItems {
-    overflow: hidden;
     text-align: right;
     a {
       display: inline-block;
       padding: 0px 10px;
-      border-right: 1px #CCC dotted;
+      border-right: 1px #fff solid;
       font-size: 15px;
       font-weight: 400;
       letter-spacing: 1px;
       text-transform: uppercase;
       text-decoration: none;
+      color: #fafafa;
       &:hover {
-        background: #333;
         color: #fff;
       }
       &:last-of-type {
