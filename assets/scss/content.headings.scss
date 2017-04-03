@@ -14,18 +14,20 @@ h1 {
     margin-top: 0;
     font-size: 3.998rem;
     &::after {
-      display: block;
-      margin: auto;
-      margin-top: 0px;
-      width: 200px;
-      border-top: 2px $color-accent solid;
-      content: ''
+        display: block;
+        margin: auto;
+        margin-top: 0px;
+        width: 200px;
+        border-top: 2px $color-accent solid;
+        content: ''
     }
-    &+p {
-        font-weight: 300;
-        text-align: center;
-        margin-top: 5px;
-        font-size: 25px;
+    .content & {
+        &+p {
+            font-weight: 300;
+            text-align: center;
+            margin-top: 5px;
+            font-size: 25px;
+        }
     }
 }
 
