@@ -15,3 +15,6 @@ somevalue | somevalue
 somevalue | somevalue
 somevalue | somevalue
 
+```javascript
+let my = 'wow'
+```
