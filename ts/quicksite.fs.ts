@@ -1,5 +1,6 @@
 import * as plugins from './quicksite.plugins'
 import * as paths from './quicksite.paths'
+import { getProviderObject } from './quicksite.providers'
 
 // interfaces
 import { IQuicksiteFile } from './quicksite.interfaces'
@@ -16,6 +17,7 @@ export let readHandlebars = async () => {
     quicksiteFileArray.push({
       css: null,
       data: parsedFile.data,
+      providers: await getProviderObject(),
       filePath: filePathArg.replace(/.md/, '.html'),
       footerItems: null,
       handlebars: parsedFile.content,

@@ -2,6 +2,7 @@ export interface IQuicksiteFile {
     css: string;
     data: any;
     filePath: string;
+    providers: any;
     footerItems: IFooterItem[];
     handlebars: string;
     markdown: string;

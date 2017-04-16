@@ -11,7 +11,7 @@
       {{{css}}}
     </style>
 
-    {{#if data.gtmId}}
+    {{#if providers.data.gtmId}}
       <!-- GTM -->
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -22,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    {{#if data.gtmId}}
+    {{#if providers.data.gtmId}}
       <!-- GTM (noscript) -->
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{data.gtmId}}"
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
