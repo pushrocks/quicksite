@@ -5,6 +5,10 @@
 @import './content';
 @import './footer';
 
+* {
+    box-sizing: border-box;
+}
+
 @media print {
     *,
     *:before,
