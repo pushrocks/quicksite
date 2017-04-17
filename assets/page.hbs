@@ -50,5 +50,18 @@
         {{/each}}
       </div>
     </div>
+    {{#if providers.data.adSense}}
+      <div class="adSection">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="{{providers.data.adSense.client}}"
+          data-ad-slot="{{providers.data.adSense.slot}}"
+          data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    {{/if}}
   </body>
 </html>

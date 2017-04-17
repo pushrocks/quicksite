@@ -1,5 +1,6 @@
 @import 'bourbon';
 @import 'neat';
+@import './mixins';
 @import './variables';
 @import './menu';
 @import './content';
@@ -90,6 +91,7 @@ textarea {
 }
 
 body {
+    background: #f8f8f8;
     color: #444;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
