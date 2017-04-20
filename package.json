@@ -39,6 +39,7 @@
     "marked": "^0.3.6",
     "npmextra": "^2.0.5",
     "smartcli": "^2.0.1",
+    "smartenv": "^2.0.6",
     "smartfile": "^4.1.9",
     "smartfm": "^1.0.2",
     "smarthbs": "^1.0.8",

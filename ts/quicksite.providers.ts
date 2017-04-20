@@ -15,8 +15,21 @@ export let getProviderObject = async () => {
 
   // add data.json provider
   let dataJsonPath = plugins.path.join(paths.docsDir, 'data.json')
+  providerObject.data = {}
+
+  // read the file if available
   if (plugins.smartfile.fs.fileExistsSync(dataJsonPath)) {
-    providerObject['data'] = plugins.smartfile.fs.toObjectSync(dataJsonPath)
+    providerObject.data = plugins.smartfile.fs.toObjectSync(dataJsonPath)
   }
+
+  // add some things from environment
+  if (process.env.QUICKSITE_ADSENSE) {
+    let resultArray: string[] = process.env.QUICKSITE_ADSENSE.split('|')
+    providerObject.data.adSense = {
+      client: resultArray[0],
+      slot: resultArray[1]
+    }
+  }
+
   return providerObject
 }

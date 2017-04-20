@@ -8,6 +8,7 @@ import * as marked from 'marked'
 import * as npmextra from 'npmextra'
 import * as path from 'path'
 import * as smartcli from 'smartcli'
+import * as smartenv from 'smartenv'
 import * as smartfile from 'smartfile'
 import * as smartfm from 'smartfm'
 import * as smarthbs from 'smarthbs'
@@ -30,6 +31,7 @@ export {
   npmextra,
   path,
   smartcli,
+  smartenv,
   smartfile,
   smartfm,
   smarthbs,
