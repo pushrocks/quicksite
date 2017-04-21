@@ -59,6 +59,17 @@
           data-ad-slot="{{providers.data.adSense.slot}}"
           data-ad-format="auto"></ins>
         <script>
+        var el = document.querySelector("#usage");
+        if(el) {
+          console.log('found #usage')
+          el.insertAdjacentHTML('beforebegin',`
+            <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="{{providers.data.adSense.client}}"
+              data-ad-slot="{{providers.data.adSense.slot}}"
+              data-ad-format="auto"></ins>
+          `)
+        }
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
       </div>

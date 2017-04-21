@@ -15,6 +15,8 @@ somevalue | somevalue
 somevalue | somevalue
 somevalue | somevalue
 
+## Usage
+
 ```javascript
 let my = 'wow'
 ```

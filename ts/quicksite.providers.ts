@@ -24,6 +24,7 @@ export let getProviderObject = async () => {
 
   // add some things from environment
   if (process.env.QUICKSITE_ADSENSE) {
+    plugins.beautylog.info('found AdSense data')
     let resultArray: string[] = process.env.QUICKSITE_ADSENSE.split('|')
     providerObject.data.adSense = {
       client: resultArray[0],
