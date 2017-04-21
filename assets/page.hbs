@@ -52,12 +52,16 @@
     </div>
     {{#if providers.data.adSense}}
       <div class="adSection">
+        <!-- Footer AdSense Usage -->
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <ins class="adsbygoogle"
           style="display:block"
           data-ad-client="{{providers.data.adSense.client}}"
           data-ad-slot="{{providers.data.adSense.slot}}"
           data-ad-format="auto"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        
+        <!-- InText AdSense Usage -->
         <script>
         var el = document.querySelector("#usage");
         if(el) {
@@ -68,9 +72,9 @@
               data-ad-client="{{providers.data.adSense.client}}"
               data-ad-slot="{{providers.data.adSense.slot}}"
               data-ad-format="auto"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
           `)
         }
-        (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
       </div>
     {{/if}}
