@@ -23,6 +23,7 @@
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','{{providers.data.gtmId}}');</script>
     {{/if}}
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
@@ -53,28 +54,28 @@
     {{#if providers.data.adSense}}
       <div class="adSection">
         <!-- Footer AdSense Usage -->
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <ins class="adsbygoogle"
           style="display:block"
           data-ad-client="{{providers.data.adSense.client}}"
           data-ad-slot="{{providers.data.adSense.slot}}"
           data-ad-format="auto"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         
-        <!-- InText AdSense Usage -->
+        <!-- inTextAdSense Usage -->
         <script>
         var el = document.querySelector("#usage");
         if(el) {
           console.log('found #usage')
           el.insertAdjacentHTML('beforebegin',`
-            <ins class="adsbygoogle"
-              style="display:block"
-              data-ad-client="{{providers.data.adSense.client}}"
-              data-ad-slot="{{providers.data.adSense.slot}}"
-              data-ad-format="auto"></ins>
+            <div class="adSectionInText">
+              <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="{{providers.data.adSense.client}}"
+                data-ad-slot="{{providers.data.adSense.slot}}"
+                data-ad-format="auto"></ins>
+            </div>
           `)
-          (adsbygoogle = window.adsbygoogle || []).push({});
         }
+        (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
       </div>
     {{/if}}
