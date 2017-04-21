@@ -70,12 +70,15 @@
               <ins class="adsbygoogle"
                 style="display:block"
                 data-ad-client="{{providers.data.adSense.client}}"
-                data-ad-slot="{{providers.data.adSense.slot}}"
+                data-ad-slot="{{providers.data.adSense.slot2}}"
                 data-ad-format="auto"></ins>
             </div>
           `)
         }
-        (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "{{providers.data.adSense.client}}",
+          enable_page_level_ads: true
+        });
         </script>
       </div>
     {{/if}}

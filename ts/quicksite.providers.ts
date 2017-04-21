@@ -28,7 +28,14 @@ export let getProviderObject = async () => {
     let resultArray: string[] = process.env.QUICKSITE_ADSENSE.split('|')
     providerObject.data.adSense = {
       client: resultArray[0],
-      slot: resultArray[1]
+      slot: resultArray[1],
+      slot2: (() => {
+        if (resultArray.length > 2) {
+          return resultArray[2]
+        } else {
+          return null
+        }
+      })()
     }
   }
 
