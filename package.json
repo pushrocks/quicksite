@@ -1,6 +1,6 @@
 {
   "name": "quicksite",
-  "version": "1.0.44",
+  "version": "1.0.45",
   "description": "quick static sites from markdown files",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
