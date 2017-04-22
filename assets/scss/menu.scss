@@ -2,7 +2,7 @@
 @import 'mixins';
 
 .menuBox {
-  @include paperShadow;
+  box-shadow: 0 2px 5px rgba(0,0,0,.26);
   margin: auto;
   box-sizing: border-box;
   margin-bottom: 70px;
