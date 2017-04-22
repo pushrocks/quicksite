@@ -1,7 +1,8 @@
 @import 'variables';
+@import 'mixins';
 
 .menuBox {
-  box-shadow: 0px 0px 5px #CCCCCC;
+  @include paperShadow;
   margin: auto;
   box-sizing: border-box;
   margin-bottom: 70px;
@@ -11,6 +12,7 @@
   position: fixed;
   padding:15px;
   will-change: transform;
+  z-index: 2;
   .menuItems {
     text-align: right;
     a {
