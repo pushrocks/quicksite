@@ -53,6 +53,10 @@
   version "8.0.24"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.24.tgz#06c580084d9add1fb40c1510ef0b448961246fb1"
 
+"@types/open@^0.0.29":
+  version "0.0.29"
+  resolved "https://registry.yarnpkg.com/@types/open/-/open-0.0.29.tgz#3de910012674909db14d608d1fde44ffa7a9ecea"
+
 "@types/q@1.x.x":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.0.3.tgz#08e99d20f7abfc0fe202b6d5a0921bfafcdea8d0"
@@ -62,6 +66,10 @@
   resolved "https://registry.yarnpkg.com/@types/resolve/-/resolve-0.0.4.tgz#9b586d65a947dea88c4bc24da0b905fe9520a0d5"
   dependencies:
     "@types/node" "*"
+
+"@types/semver@^5.3.33":
+  version "5.3.34"
+  resolved "https://registry.yarnpkg.com/@types/semver/-/semver-5.3.34.tgz#6fade409ceb8ae817c1f7f1cfa5375416e97045f"
 
 "@types/shelljs@^0.7.2":
   version "0.7.4"
@@ -196,7 +204,7 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
-beautycolor@^1.0.7:
+beautycolor@^1.0.11, beautycolor@^1.0.7, beautycolor@^1.0.9:
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/beautycolor/-/beautycolor-1.0.11.tgz#71c5568d5a7ed5c144d3a54f753ad1b08862aea5"
   dependencies:
@@ -1153,7 +1161,7 @@ moment-timezone@^0.5.x:
   dependencies:
     moment ">= 2.9.0"
 
-"moment@>= 2.9.0":
+"moment@>= 2.9.0", moment@^2.18.1:
   version "2.18.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
 
@@ -1286,6 +1294,10 @@ onetime@^2.0.0:
   resolved "https://registry.yarnpkg.com/onetime/-/onetime-2.0.1.tgz#067428230fd67443b2794b22bba528b6867962d4"
   dependencies:
     mimic-fn "^1.0.0"
+
+open@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/open/-/open-0.0.5.tgz#42c3e18ec95466b6bf0dc42f3a2945c3f0cad8fc"
 
 optimist@^0.6.1:
   version "0.6.1"
@@ -1605,7 +1617,7 @@ scss-tokenizer@^0.2.3:
     js-base64 "^2.1.8"
     source-map "^0.4.2"
 
-"semver@2 || 3 || 4 || 5", semver@^5.3.0:
+"semver@2 || 3 || 4 || 5", semver@^5.3.0, semver@^5.4.1:
   version "5.4.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.4.1.tgz#e059c09d8571f0540823733433505d3a2f00b18e"
 
@@ -1728,6 +1740,23 @@ smartlodash@^1.0.1:
     "@types/node" "^8.0.10"
     lodash "^4.17.4"
 
+smartnpm@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/smartnpm/-/smartnpm-1.0.4.tgz#026ce3b3f3b46ec546de51908a0d408848466c0d"
+  dependencies:
+    beautycolor "^1.0.9"
+    beautylog "^6.1.10"
+    smartrequest "^1.0.6"
+    typings-global "^1.0.16"
+
+smartopen@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/smartopen/-/smartopen-1.0.3.tgz#11a5835b50103e09fc9702ec9a884605ad7e584d"
+  dependencies:
+    "@types/open" "^0.0.29"
+    open "^0.0.5"
+    typings-global "^1.0.20"
+
 smartparam@0.1.1, smartparam@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/smartparam/-/smartparam-0.1.1.tgz#51c526bf38b0965007b21edd3e96c7e179c93591"
@@ -1788,6 +1817,34 @@ smartshell@^1.0.6:
     smartq "^1.1.6"
     typings-global "^1.0.19"
     which "^1.2.14"
+
+smarttime@^1.0.9:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/smarttime/-/smarttime-1.0.10.tgz#6bbcc0e31fb60bb085ad49c126436a5665d1b92a"
+  dependencies:
+    moment "^2.18.1"
+    typings-global "^1.0.16"
+
+smartupdate@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/smartupdate/-/smartupdate-1.0.10.tgz#b6f8ca780e6c16686ac7d1381a539ff59cbed0de"
+  dependencies:
+    beautycolor "^1.0.11"
+    beautylog "^6.1.10"
+    npmextra "^2.0.9"
+    smartnpm "^1.0.4"
+    smartopen "^1.0.3"
+    smarttime "^1.0.9"
+    smartversion "^1.0.3"
+    typings-global "^1.0.20"
+
+smartversion@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/smartversion/-/smartversion-1.0.3.tgz#8b6b1553594a4df7fac8495bc2802b4a6f84a27c"
+  dependencies:
+    "@types/semver" "^5.3.33"
+    semver "^5.4.1"
+    typings-global "^1.0.16"
 
 sntp@1.x.x:
   version "1.0.9"

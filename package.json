@@ -47,6 +47,7 @@
     "smartq": "^1.1.6",
     "smartrequire": "^1.0.2",
     "smartsass": "^1.0.5",
+    "smartupdate": "^1.0.10",
     "typings-global": "^1.0.20"
   },
   "devDependencies": {}
