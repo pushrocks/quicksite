@@ -1,7 +1,6 @@
 import * as plugins from './quicksite.plugins'
 import * as paths from './quicksite.paths'
 
-
 let quicksiteNpmextra = new plugins.npmextra.Npmextra(paths.cwd)
 
 let providerObject: any = {}
