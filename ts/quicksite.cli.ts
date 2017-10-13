@@ -9,7 +9,7 @@ import * as quicksiteMenu from './quicksite.menu'
 import * as quicksiteMarkdown from './quicksite.markdown'
 
 let quicksiteCli = new plugins.smartcli.Smartcli()
-
+quicksiteCli.onlyTriggerOnProcessEnvCliCall() // make sure we can require this package
 export let run = () => {
   quicksiteCli.standardTask().then(argv => {
     quicksiteFs.readHandlebars()
