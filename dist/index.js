@@ -12,11 +12,15 @@ const cli = require("./quicksite.cli");
 cli.run();
 const quicksiteFs = require("./quicksite.fs");
 const quicksiteHandlears = require("./quicksite.handlebars");
+const quicksiteMenu = require("./quicksite.menu");
+const quicksiteFooter = require("./quicksite.footer");
 /**
  * gets files without processing them
  */
 exports.getFilesArrayWithProviderData = () => __awaiter(this, void 0, void 0, function* () {
     return yield quicksiteFs.readHandlebars()
-        .then(quicksiteHandlears.handlebarsToMarkdown);
+        .then(quicksiteHandlears.handlebarsToMarkdown)
+        .then(quicksiteMenu.buildMenu)
+        .then(quicksiteFooter.buildFooter);
 });
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi90cy9pbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0FBQUEsdUNBQXNDO0FBQ3RDLEdBQUcsQ0FBQyxHQUFHLEVBQUUsQ0FBQTtBQUVULDhDQUE2QztBQUM3Qyw2REFBNEQ7QUFRNUQ7O0dBRUc7QUFDUSxRQUFBLDZCQUE2QixHQUFHLEdBQVMsRUFBRTtJQUNwRCxNQUFNLENBQUMsTUFBTSxXQUFXLENBQUMsY0FBYyxFQUFFO1NBQ3RDLElBQUksQ0FBQyxrQkFBa0IsQ0FBQyxvQkFBb0IsQ0FBQyxDQUFBO0FBQ2xELENBQUMsQ0FBQSxDQUFBIn0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi90cy9pbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0FBQUEsdUNBQXNDO0FBQ3RDLEdBQUcsQ0FBQyxHQUFHLEVBQUUsQ0FBQTtBQUVULDhDQUE2QztBQUM3Qyw2REFBNEQ7QUFDNUQsa0RBQWlEO0FBQ2pELHNEQUFxRDtBQVFyRDs7R0FFRztBQUNRLFFBQUEsNkJBQTZCLEdBQUcsR0FBUyxFQUFFO0lBQ3BELE1BQU0sQ0FBQyxNQUFNLFdBQVcsQ0FBQyxjQUFjLEVBQUU7U0FDdEMsSUFBSSxDQUFDLGtCQUFrQixDQUFDLG9CQUFvQixDQUFDO1NBQzdDLElBQUksQ0FBQyxhQUFhLENBQUMsU0FBUyxDQUFDO1NBQzdCLElBQUksQ0FBQyxlQUFlLENBQUMsV0FBVyxDQUFDLENBQUE7QUFDdEMsQ0FBQyxDQUFBLENBQUEifQ==
