@@ -4,6 +4,9 @@ cli.run()
 import * as quicksiteFs from './quicksite.fs'
 import * as quicksiteHandlears from './quicksite.handlebars'
 
+// interfaces
+import { IQuicksiteFile } from './quicksite.interfaces'
+
 /**
  * gets files without processing them
  */
