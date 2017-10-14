@@ -1,4 +1,5 @@
 import { IQuicksiteFile } from './quicksite.interfaces';
+export { IQuicksiteFile };
 /**
  * gets files without processing them
  */
