@@ -1,6 +1,3 @@
-import { IQuicksiteFile } from './quicksite.interfaces';
-export { IQuicksiteFile };
-/**
- * gets files without processing them
- */
-export declare let getFilesArrayWithProviderData: () => Promise<IQuicksiteFile[]>;
+export * from './quicksite.classes.doc';
+export * from './quicksite.classes.docsbinder';
+export * from './quicksite.classes.docsmenu';
