@@ -10,7 +10,7 @@ export class DocsBinder {
     // nothing here
   }
 
-  readHandlebarsFromDir = async (dirArg: string) => {
+  readHandlebarMarkdownFromDir = async (dirArg: string) => {
     let fileList = await plugins.smartfile.fs.listFileTree(dirArg, '**/!(00)*.md')
     for (let filePathArg of fileList) {
       let fileString = plugins.smartfile.fs.toStringSync(plugins.path.join(dirArg, filePathArg))
