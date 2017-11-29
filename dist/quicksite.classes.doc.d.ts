@@ -1,16 +1,43 @@
-import { DocsMenu } from './quicksite.classes.docsmenu';
+/// <reference types="node" />
+import * as plugins from './quicksite.plugins';
+import { IMenuItem } from './quicksite.classes.docsmenu';
+export interface IMetaInformation {
+    title: string;
+    description: string;
+    wordcount: number;
+    rank: number;
+}
 export declare class Doc {
-    data: any;
     filePath: string;
+    parsedPath: plugins.path.ParsedPath;
+    menuItem: IMenuItem;
     providers: any;
-    originalContent: string;
+    private originalString;
+    private renderData;
+    renderedString: string;
     rawContent: string;
-    markdown: string;
-    menu: DocsMenu;
-    constructor(originalContentArg: string);
-    evaluateOriginal(): void;
+    rawFrontmatter: any;
+    metaInformation: IMetaInformation;
     /**
-     * renders the rawContent with handlebars
+     * creates a new doc from a string
+     * @param originalStringArg
      */
-    render(): Promise<string>;
+    constructor(originalStringArg: string, renderDataArg: any);
+    static fromFilePath(filePathArg: any): Doc;
+    /**
+     * updates & renders the rawContent with handlebars
+     */
+    update(): Promise<void>;
+    /**
+     * evaluates the doc (the string the doc is created from)
+     * and then parses things like frontmatter, metainformation etc.
+     */
+    private evaluateDoc();
+    private getMetadataTitle();
+    private getMetadataDescription();
+    private getMetadataWordcount();
+    /**
+     * get the metadata rank (important for ranking the Doc in the menu)
+     */
+    private getMetadataRank();
 }

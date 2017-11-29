@@ -1,6 +1,7 @@
 import 'typings-global'
 import * as beautylog from 'beautylog'
 import * as handlebars from 'handlebars'
+import * as lik from 'lik'
 import * as npmextra from 'npmextra'
 import * as path from 'path'
 import * as smartenv from 'smartenv'
@@ -15,6 +16,7 @@ export {
   handlebars,
   npmextra,
   path,
+  lik,
   smartenv,
   smartfile,
   smartfm,

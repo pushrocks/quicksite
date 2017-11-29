@@ -12,4 +12,8 @@ tap.test('should create a valid DocsBinder', async () => {
   expect(testDocsBinder).to.be.instanceOf(quicksite.DocsBinder)
 })
 
+tap.test('should read a directory of docs', async () => {
+  await testDocsBinder.readHandlebarMarkdownFromDir(testprojectDir)
+})
+
 tap.start()

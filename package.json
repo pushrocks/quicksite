@@ -26,6 +26,7 @@
     "@types/handlebars": "^4.0.36",
     "beautylog": "^6.1.10",
     "handlebars": "^4.0.10",
+    "lik": "^2.0.2",
     "npmextra": "^2.0.9",
     "smartenv": "^3.0.0",
     "smartfile": "^4.2.26",

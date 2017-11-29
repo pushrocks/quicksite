@@ -1,7 +1,8 @@
 {
   "npmts":{
     "mode": "default",
-    "cli": true
+    "cli": true,
+    "coverageTreshold": 50
   },
   "npmci": {
     "npmGlobalTools": [

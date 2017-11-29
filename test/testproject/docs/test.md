@@ -1,5 +1,6 @@
 ---
 name: Some Other Name
+description: this is a description
 ---
 # This is a Heading
 and a paragraph behind a heading

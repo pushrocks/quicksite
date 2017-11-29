@@ -35,6 +35,10 @@
   version "4.14.73"
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.73.tgz#9837e47db8643ba5bcef2c7921f37d90f9c24213"
 
+"@types/lodash@^4.14.74":
+  version "4.14.85"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.85.tgz#a16fbf942422f6eca5622b6910492c496c35069b"
+
 "@types/minimatch@*":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.0.tgz#a8b68c324817169b6004b432a598478a5d8f025a"
@@ -42,6 +46,10 @@
 "@types/minimatch@2.x.x":
   version "2.0.29"
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-2.0.29.tgz#5002e14f75e2d71e564281df0431c8c1b4a2a36a"
+
+"@types/minimatch@3.x.x":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.1.tgz#b683eb60be358304ef146f5775db4c0e3696a550"
 
 "@types/node@*", "@types/node@^8.0.10":
   version "8.0.24"
@@ -644,6 +652,18 @@ lik@^1.0.38:
     smartq "^1.1.1"
     typings-global "^1.0.19"
 
+lik@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/lik/-/lik-2.0.2.tgz#da4e67458ab81fac9e62848e8e76dc1efe1c646f"
+  dependencies:
+    "@types/lodash" "^4.14.74"
+    "@types/minimatch" "3.x.x"
+    lodash "^4.17.4"
+    minimatch "^3.0.4"
+    smartq "^1.1.6"
+    symbol-tree "^3.2.2"
+    typings-global "^1.0.20"
+
 lodash@^3.10.1:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
@@ -1170,6 +1190,10 @@ supports-color@^2.0.0:
 symbol-observable@^1.0.1:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.0.4.tgz#29bf615d4aa7121bdd898b22d4b3f9bc4e2aa03d"
+
+symbol-tree@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.2.tgz#ae27db38f660a7ae2e1c3b7d1bc290819b8519e6"
 
 tapbundle@^1.1.8:
   version "1.1.8"
